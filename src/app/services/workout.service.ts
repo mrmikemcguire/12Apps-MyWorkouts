@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/Rx';
-import {map} from "rxjs/operator/map";
+// import {map} from "rxjs/operator/map";
 
 @Injectable()
 
@@ -27,5 +27,10 @@ export class WorkoutService{
         return this.http.post(this.workoutsUrl+'?apiKey='+this.apiKey, JSON.stringify(workout),
             {headers:headers})
         .map(res => res.json());
+    }
+
+    deleteWorkout(workoutId){
+        return this.http.delete(this.workoutsUrl+'/'+workoutId+'?apiKey='+this.apiKey)
+            .map(res => res.json());
     }
 }
