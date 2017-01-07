@@ -11,7 +11,7 @@ export class WorkoutDetailsPage {
     public workout: any;
     public result: any;
 
-    constructor(public navCtrl: NavController, public params: NavParams, workoutService: WorkoutService) {
+    constructor(public navCtrl: NavController, public params: NavParams, public workoutService: WorkoutService) {
         this.workout = params.get('workout');
 
     }

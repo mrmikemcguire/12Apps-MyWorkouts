@@ -14,7 +14,7 @@ export class AddWorkoutPage {
     public type: string;
     public result: any;
 
-    constructor(public navCtrl: NavController, private workoutService:WorkoutService) {
+    constructor(public navCtrl: NavController, public workoutService:WorkoutService) {
 
     }
 
